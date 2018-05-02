@@ -66,7 +66,7 @@ This section is intended to give an upfront, quick view of Go standards. For a m
 * Use 'ok' as second argument to functions that return a bool of whether an operation completed successfully, such as map indexing or type assertions
 * Use descriptiveName for variables used more than a few lines from declaration
 * Where possible, use *i* for indexes, *n* for counts(eg bytes read), *err* for errors
-* Do not use exported names that stutter with the package name - eg use *netscaler.Client*, not *netscaler.NetscalerClient*
+* Do not use exported names that stutter with the package name - eg use *http.Client*, not *http.HTTPClient*
 * Packages should be named according to the problem they provide code for.
 * Package names should be singular
 * Avoid using named imports. If imports clash, named imports can be used, but you should also question content of the packages (if they're our own)
@@ -269,7 +269,7 @@ Common use-cases for using *defer* are closing open connections and releasing lo
 ## Coverage
 All code should be unit tested before being committed. Always shoot for at least 80% coverage, though some leniency may be shown in some more extreme cases.
 ## Test Methods
-* TODO: discuss possible usage of httpmock for 3rd party http apis
+* TODO: evaluate possible usage of httpmock for 3rd party http apis
 * Use go-sqlmock for RDMS mocks (<a href="https://github.com/DATA-DOG/go-sqlmock">go-sqlmock</a>)
 * Use interfaces for testing elsewhere.
 ## Table Driven Tests
